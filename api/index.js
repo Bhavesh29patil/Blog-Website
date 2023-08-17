@@ -140,6 +140,22 @@ app.get('/post/:id' , async (req, res) => {
     res.json(postDoc);
 })
 
+app.get('/author/:username' , async (req, res) => {
+    const {username} = req.params;
+    const authorPosts = await Post.find()
+    .populate({
+        path: 'author',
+        select: 'username',
+        match: { username }
+    })
+    .sort({ createdAt: -1 })
+    .limit(15)
+
+const filteredPosts = authorPosts.filter(post => post.author !== null);
+
+res.json(filteredPosts);
+})
+
 
 
 app.listen(PORT);

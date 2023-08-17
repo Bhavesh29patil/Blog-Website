@@ -25,11 +25,13 @@ const PostPage = () => {
 
             <div className="author">
                 <div className="author">
-                    <span className="normal-font-weight">Author </span> <span className="bold-font-weight">{postInfo.author.username}</span>
+                    <span className="normal-font-weight">Author </span> <span className="bold-font-weight">
+                        {/* {console.log(postInfo.author._id)} */}
+                        <Link to={`/author/${postInfo.author.username}`}>{postInfo.author.username}</Link>
+                    </span>
                 </div>
 
             </div>
-
             {userinfo.id === postInfo.author._id && (
                 <div className="edit-post">
                     <Link className='edit-button' to={`/edit/${postInfo._id}`}>Edit the Post</Link>

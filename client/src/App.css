@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    padding : 10px;
+    max-width : 600px;
+    margin : 0 auto
+}
+
+img {
+    max-width : 100%
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a.logo{
+    font-weight: bold ;
+    font-size: 1.2rem;
+}
+
+header nav{
+    display: flex;
+    gap : 15px
+}
+
+div.post {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2%;
+    margin-bottom: 30px;
+    height: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+div.post div.image img {
+    width: 100%;
+    height: 300px;
+}
+
+div.post div.texts h2{
+    margin: 0;
+    text-decoration: none;
+    font-size:1.5rem;
+}
+div.post div.texts a{
+    text-decoration: none;
+    color: inherit;
+}
+
+div.post p.info{
+    margin: 6px 0;
+    color: #888;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+
+div.post p.info a.author{
+    color: rgb(89, 77, 77);
+}
+
+div.post .texts {
+    overflow: hidden;
+}
+
+div.post .summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+form.login, form.register {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    border: 1px solid grey;
+
+}
+
+button{
+    width: 100%;
+    height: 1.8rem;
+    background-color: grey;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+form.login h1 , form.register h1 {
+    text-align: center;
+}
+
+div.post-page div.image {
+    max-height: 240px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+div.post-page div.image img {
+    /* object-fit : cover;
+    object-position: center center; */
+    width: 100%;
+}
+
+div.post-page a {
+    color: black;
+    text-decoration: underline;
+}
+
+div.post-page h1 {
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+div.post-page time {
+    text-align: center;
+    display: block;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+div.post-page div.author {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+} 
+
+div.post-page div.author span.normal-font-weight {
+    font-weight: normal;
+}
+
+div.post-page div.author span.bold-font-weight {
+    font-weight: bold;
+}
+
+div.post-page div.content p {
+    line-height: 1.2rem;
+}
+
+div.edit-post {
+    text-align: center;
+}
+
+div.edit-post a.edit-button {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    text-decoration: none;
+    display: inline-block;
+}

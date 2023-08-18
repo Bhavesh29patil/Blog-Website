@@ -10,6 +10,8 @@ import CreatePost from './pages/CreatePost'
 import PostPage from './pages/PostPage'
 import EditPost from './pages/EditPost'
 import AuthorPage from './pages/AuthorPage'
+import DeletePage from './pages/DeletePage'
+import ProfilePage from './pages/ProfilePage'
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
       <Route path='/post/:id' element={<PostPage />} />
       <Route path='/edit/:id' element={<EditPost />} />
       <Route path='/author/:username' element={<AuthorPage />} />
+      <Route path='/profile' element={<ProfilePage />} />
       </Route>
     </Routes>
     </UserContextProvide>

@@ -35,6 +35,7 @@ const Header = () => {
               <>
               <span>Welcome {username}</span>
               <Link to={`/author/${username}`}>My Posts</Link>
+              <Link to={`/profile`}>profile</Link>
               <Link to='/create'>Create new Post</Link>
               <Link onClick={logoutHandler}>Logout</Link>
               </>

@@ -173,3 +173,34 @@ div.edit-post a.edit-button {
     text-decoration: none;
     display: inline-block;
 }
+div.edit-post a.edit-button:hover {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(82, 76, 76);
+    text-decoration: none;
+    display: inline-block;
+}
+
+div.edit-post a.delete-button {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(201, 64, 64);
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+div.edit-post a.delete-button:hover {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(171, 64, 64);
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 8px;
+}

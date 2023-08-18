@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { format } from 'date-fns';
 import {UserContext} from '../UserContext'
 
 const PostPage = () => {
+    const navigate = useNavigate();
     const [postInfo, setPostInfo] = useState(null)
     const {userinfo} = useContext(UserContext)
     const { id } = useParams();
@@ -15,6 +16,24 @@ const PostPage = () => {
                 })
             })
     }, []);
+
+  const deletePostHandler = async () => {
+        try {
+            const response = await fetch(`http://localhost:8000/post/${id}`, {
+                credentials: 'include',
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                alert('post deleted successfully')
+                navigate('/')
+            } else {
+                alert('failed to delete')
+            }
+        } catch (e) {
+            console.log('Error deleting post:', e);
+        }
+    };
 
     if (!postInfo) return '';
 
@@ -35,6 +54,7 @@ const PostPage = () => {
             {userinfo.id === postInfo.author._id && (
                 <div className="edit-post">
                     <Link className='edit-button' to={`/edit/${postInfo._id}`}>Edit the Post</Link>
+                    <Link className='delete-button' onClick={deletePostHandler}>Delete Post</Link>
                 </div>
             )}
 

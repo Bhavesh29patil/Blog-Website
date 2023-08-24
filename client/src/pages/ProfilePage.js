@@ -29,7 +29,8 @@ const ProfilePage = () => {
                 <div>
                     <h2>User Info</h2>
                     <h3>{userInfo.username}</h3>
-                    {console.log(userInfo)}
+                    <h3>{userInfo.email}</h3>
+                    {/* {console.log(userInfo)} */}
                 </div>
             )}
         </div>

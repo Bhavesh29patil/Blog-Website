@@ -15,10 +15,24 @@ const AuthorPage = () => {
     }, [username])
         return(
             <>
-            <h2>Blogs of {username}</h2>
+            {/* <h2>Blogs of {username}</h2>
             {posts.length > 0 && posts.map(post => (
                 <Post {...post} />
-            ))}
+            ))} */}
+            <div className="main">
+                <div className="container">
+                    <div class="blog">
+
+                        <h2 class="h2">@{username}</h2>
+
+                        <div class="blog-card-group">
+                            {posts.length > 0 && posts.map(post => (
+                                <Post {...post} />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
             </>
         )
 }

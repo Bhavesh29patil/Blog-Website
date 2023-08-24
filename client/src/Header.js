@@ -1,23 +1,23 @@
-import { useContext , useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 const Header = () => {
 
-  const {setUserinfo , userinfo} = useContext(UserContext)
+  const { setUserinfo, userinfo } = useContext(UserContext)
 
-  useEffect(()=>{
-    fetch('http://localhost:8000/profile' , {
+  useEffect(() => {
+    fetch('http://localhost:8000/profile', {
       credentials: 'include'
     }).then(response => {
       response.json().then(userInfo => {
         setUserinfo(userInfo)
       })
     })
-  } , [])
+  }, [])
 
   const logoutHandler = () => {
-    fetch('http://localhost:8000/logout' , {
+    fetch('http://localhost:8000/logout', {
       credentials: 'include',
       method: 'POST',
     })
@@ -25,31 +25,41 @@ const Header = () => {
   }
 
   const username = userinfo?.username;
+  return (
+    <div className="light-theme">
+      <header>
 
-    return(
-        <header>
-        <Link to='/' className='logo'>MyBlog</Link>
-        <nav>
-          {
-            username && (
+        <div className="container">
+          <nav className="navbar">
+            <h1>
+              <Link to='/' className='logo'>MyBlog</Link>
+            </h1>
+            {
+              username && (
+                <>
+                <div className="flex-wrapper">
+                  <ul class="desktop-nav">
+                    <Link className="nav-link" onClick={logoutHandler}>Logout</Link>
+                  </ul>
+                </div>
+
+                </>
+                
+
+              )
+            }
+            {!username && (
               <>
-              <span>Welcome {username}</span>
-              <Link to={`/author/${username}`}>My Posts</Link>
-              <Link to={`/profile`}>profile</Link>
-              <Link to='/create'>Create new Post</Link>
-              <Link onClick={logoutHandler}>Logout</Link>
+                {/* <Link to='/login'>Login</Link>
+                <Link to='/register'>Register</Link> */}
               </>
-            )
-          }
-          {!username && (
-            <>
-            <Link to='/login'>Login</Link>
-            <Link to='/register'>Register</Link>
-            </>
-          )}
+            )}
           </nav>
-          </header>
-    )
+        </div>
+      </header>
+    </div>
+
+  )
 }
 
 export default Header;

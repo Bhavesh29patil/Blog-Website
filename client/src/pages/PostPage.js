@@ -38,6 +38,7 @@ const PostPage = () => {
     if (!postInfo) return '';
 
     return (
+        <div className='out-post-page'>
         <div className='post-page'>
             <h1>{postInfo.title}</h1>
             <time>{format(new Date(postInfo.createdAt), "MMM d, yyyy HH:mm")}</time>
@@ -51,7 +52,7 @@ const PostPage = () => {
                 </div>
 
             </div>
-            {userinfo.id === postInfo.author._id && (
+            {userinfo && userinfo.id === postInfo.author._id && (
                 <div className="edit-post">
                     <Link className='edit-button' to={`/edit/${postInfo._id}`}>Edit the Post</Link>
                     <Link className='delete-button' onClick={deletePostHandler}>Delete Post</Link>
@@ -63,6 +64,7 @@ const PostPage = () => {
             </div>
             <div className='content' dangerouslySetInnerHTML={{ __html: postInfo.content }} />
         </div>
+    </div>
     )
 }
 

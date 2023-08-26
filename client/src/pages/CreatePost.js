@@ -33,14 +33,20 @@ const CreatePost = () => {
 
   return (
     <div className='main'>
-      <h1>Create Post</h1>
     <form onSubmit={formSubmitHandler}>
+      <h1>Create Post</h1>
+      <div className = 'edit-description'>
       <input type="text" placeholder='Title' value={title} onChange={e => setTitle(e.target.value)}/>
+      </div>
+      <div className = 'edit-description'>
       <input type="text"  placeholder='Summary' value={summary} onChange={e => setSummary(e.target.value)} />
+      </div>
+      <div className = 'edit-description'>
       <input type="file"  onChange={e => setFiles(e.target.files)} placeholder='Title' />
+      </div>
       <Editor className='quill' value={content} onChange={setContent}/>
 
-      <button >Create Post</button>
+      <button className = 'post-btn'>Create Post</button>
     </form>
     </div>
   )

@@ -57,11 +57,12 @@ const LoginPage = () => {
             <span className="symbol-text-box">
               {/* <i className="fa fa-lock" aria-hidden="true" /> */}
             </span>
-            <div className="container-log-sin-form-btn">
+              <div className="log-sin-btn">
               <button className="log-sin-form-btn">Login</button>
-            </div>
+
+              </div>
             <div className="text-center ">
-              <Link to={'/'}>
+              <Link to={'/'} className='txt2'>
                 <i className="fa fa-long-arrow-left m-l-5" aria-hidden="true" />&nbsp;
                 Home
               </Link>

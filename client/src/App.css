@@ -1,3 +1,5 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lobster&family=Nanum+Myeongjo&family=Oleo+Script&family=Oranienbaum&family=Oswald:wght@300;400&family=Pattaya&family=Roboto:ital,wght@0,100;0,400;1,400&family=Tilt+Prism&display=swap');
 *{
     --background-primary: hsl(0, 0%, 100%);
     --background-secondary: hsl(0, 0%, 97%);
@@ -36,9 +38,9 @@
 
 
 header a.logo{
-    font-weight: bold ;
-    font-size: 1.2rem;
-    color: var(--accent2);
+    font-size: 1.6rem;
+    color: var(--accent2);    
+    font-family: 'Tilt Prism', cursive;
 }
 header a.logo:hover{
     color: var(--action-primary);
@@ -58,10 +60,35 @@ header a.logo:hover{
    background-color: red; */
 }
 
+form h1 {
+    margin-bottom: 20px;
+    font-family: 'Oranienbaum', serif;
+    color: var(--accent);
+}
+
+.edit-description {
+    width: 60%;
+    text-align: center;
+}
+
+form .edit-description h5 {
+    font-family: 'Oranienbaum', serif;
+    color:black;
+    margin-bottom: 4px;
+    text-align: left;
+    /* font-family: 'Fredericka the Great', cursive; */
+    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Oleo Script', cursive; */
+    /* font-family: 'Oswald', sans-serif; */
+    /* font-family: 'Pattaya', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Tilt Prism', cursive; */
+}
+
  form input
 {
     margin-bottom: 20px;
-    width: 60%;
+    width: 100%;
     padding: 10px;
     border: none;
     background-color: var(--accent3);
@@ -72,23 +99,27 @@ form input:focus{
     outline: none;
 }
 
-form button{
+.post-btn{
     margin-top: 30px;
     width: 20%;
-    height: 1.8rem;
+    height: 1.9rem;
     background-color: var(--accent);
     border: none;
     color: white;
     border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
 }
 form button:hover{
-    background-color: var(--accent1);
+    /* background-color: var(--accent1); */
+    color: var(--accent2);
+    
 }
 
 .quill{
     background-color: var(--accent3);
     /* padding: 0 100px; */
-    width: 60%;
+    /* width: 60%; */
     border-radius: 10px;
     border: 3px solid var(--accent);
 }
@@ -156,6 +187,8 @@ div.post-page a:hover {
 div.post-page h1 {
     text-align: center;
     margin: 20px 45px 3px 45px;
+    font-family: 'Oranienbaum', serif;
+    color: rgb(67, 63, 63);
 }
 
 div.post-page time {
@@ -181,7 +214,9 @@ div.post-page div.author span.bold-font-weight {
 }
 
 div.post-page div.content p {
-    line-height: 1.2rem;
+    line-height: 1.9rem;
+    font-weight: bold;
+    font-family: 'Nanum Myeongjo', serif;
 }
 div.post-page div.content  {
     margin: 30px;
@@ -271,7 +306,8 @@ div.edit-post a.delete-button:hover {
 
 .h3 {
     font-size: var(--fs-3);
-    font-weight: 700
+    font-weight: bold;
+    font-family: 'Oranienbaum', serif;
 }
 
 .h4 {
@@ -310,6 +346,8 @@ div.edit-post a.delete-button:hover {
     justify-content: center;
     align-items: center;
     max-width: 10px;
+    font-size: 1.1rem;
+    font-family: 'Oswald', sans-serif;
 }
 
 .btn-primary:hover {
@@ -327,6 +365,8 @@ div.edit-post a.delete-button:hover {
     justify-content: center;
     align-items: center;
     max-width: 10px;
+    font-size: 1.1rem;
+    font-family: 'Oswald', sans-serif;
 }
 
 .btn-secondary:hover {
@@ -385,7 +425,15 @@ header .btn-group {
 
 .hero .h1 {
     margin-bottom: 1rem;
-    line-height: 1.6
+    line-height: 1.6;
+    font-family: 'Oranienbaum', serif;
+    /* font-family: 'Fredericka the Great', cursive; */
+    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Oleo Script', cursive; */
+    /* font-family: 'Oswald', sans-serif; */
+    /* font-family: 'Pattaya', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Tilt Prism', cursive; */
 }
 
 .hero b {
@@ -430,7 +478,10 @@ header .btn-group {
 .h2blog {
     text-align: center;
     padding: 50px 0 50px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: var(--accent);
+    font-family: 'Pattaya', sans-serif; 
+    font-weight: lighter;
 }
 
 /* -----POSTS CARDS----- */
@@ -474,10 +525,11 @@ header .btn-group {
     text-decoration-thickness: 2px
 }
 
-.blog-text,
-
-.blog .h4 {
-    color: var(--foreground-secondary)
+.blog-text {
+    color: var(--foreground-secondary);
+    font-family:'Times New Roman', Times, serif ;
+    line-height: 1.3rem;
+    word-spacing: 1.2px;
 }
 
 .blog .h4:hover {
@@ -566,7 +618,7 @@ header .btn-group {
 
     .blog-text {
         color: var(--foreground-secondary);
-        font-size: var(--fs-4);
+        /* font-size: 1.1rem; */
         display: -webkit-box;
         line-clamp: 3;
         -webkit-line-clamp: 3;
@@ -631,8 +683,16 @@ header .btn-group {
 
     .desktop-nav .nav-link {
         color: var(--accent2);
-        font-weight: bold ;
-        font-size: 1.1rem;
+        /* font-weight: bold ; */
+        font-size: 1.4rem;    
+        /* font-family: 'Oranienbaum', serif; */
+        /* font-family: 'Fredericka the Great', cursive; */
+        /* font-family: 'Lobster', cursive; */
+        /* font-family: 'Oleo Script', cursive; */
+        font-family: 'Oswald', sans-serif;
+        /* font-family: 'Pattaya', sans-serif; */
+        /* font-family: 'Roboto', sans-serif; */
+        /* font-family: 'Tilt Prism', cursive; */
     }
 
     .desktop-nav .nav-link:hover {

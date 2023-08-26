@@ -49,17 +49,27 @@ const EditPost = () => {
         <div className='main'>
             <div className='edit-box'>
 
-                <h1>Edit Post</h1>
                 <form onSubmit={formEditHandler}>
+                    <h1>Edit Post</h1>
+                    <div className='edit-description'>
                     <h5>Title</h5>
                     <input type="text" placeholder='Title' value={title} onChange={e => setTitle(e.target.value)} />
+                    </div>
+                    <div className='edit-description'>
                     <h5>Summary</h5>
                     <input type="text" placeholder='Summary' value={summary} onChange={e => setSummary(e.target.value)} />
+                    </div>
+                    <div className='edit-description'>
                     <h5>Choose Image</h5>
+                    </div>
+                    <div className='edit-description'>
                     <input type="file" onChange={e => setFiles(e.target.files)} placeholder='Title' />
+                    </div>
+                    <div className='edit-description'>
                     <h5>Blog</h5>
                     <Editor className='quill' onChange={setContent} value={content} />
-                    <button >Edit Post</button>
+                    <button className='post-btn'>Edit Post</button>
+                    </div>
                 </form>
             </div>
         </div>

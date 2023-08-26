@@ -40,7 +40,7 @@ const PostPage = () => {
     return (
         <div className='out-post-page'>
         <div className='post-page'>
-            <h1>{postInfo.title}</h1>
+            <h1 className='post-page-title'>{postInfo.title}</h1>
             <time>{format(new Date(postInfo.createdAt), "MMM d, yyyy HH:mm")}</time>
 
             <div className="author">

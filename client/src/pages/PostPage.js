@@ -37,6 +37,9 @@ const PostPage = () => {
 
     if (!postInfo) return '';
 
+
+    
+
     return (
         <div className='out-post-page'>
         <div className='post-page'>
